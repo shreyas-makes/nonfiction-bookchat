@@ -26,6 +26,32 @@ Agent-neutral skill for grounded Q&A over local non-fiction ebooks. It extracts 
 ## Agent Skills compatibility
 This skill follows the Agent Skills format (SKILL.md with YAML frontmatter plus optional resources). It should work across agent platforms that support the format.
 
+## Installation
+### Codex
+```bash
+# From the repo root
+mkdir -p "$CODEX_HOME/skills"
+cp -R . "$CODEX_HOME/skills/nonfiction-book-chat"
+```
+Add or update your `AGENTS.md` to include the skill entry pointing at `$CODEX_HOME/skills/nonfiction-book-chat/SKILL.md`.
+
+### Claude Code
+Claude Code supports Agent Skills when they are listed in your project `AGENTS.md` and the skill folder is on disk.
+```bash
+# Put the skill in a shared skills directory you use for Claude Code
+mkdir -p "$HOME/.claude/skills"
+cp -R . "$HOME/.claude/skills/nonfiction-book-chat"
+```
+Then reference the skill in your project `AGENTS.md` with the path to `~/.claude/skills/nonfiction-book-chat/SKILL.md`.
+
+### GitHub Copilot
+Copilot does not currently consume Agent Skills directly. Use the SKILL.md contents as instructions:
+```bash
+mkdir -p .github
+cp SKILL.md .github/copilot-instructions.md
+```
+Keep the skill folder next to your books so Copilot can follow the extraction/retrieval steps.
+
 ## Files
 - SKILL.md: primary instructions and workflow
 
