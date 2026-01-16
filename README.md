@@ -4,15 +4,15 @@ Agent-neutral skill for grounded Q&A over local non-fiction ebooks. It extracts 
 
 ## What this skill does
 - Answers using only the provided books; refuses unrelated or speculative content
-- Retrieves from extracted text files using ripgrep (`rg`)
+- Retrieves from extracted text files 
 - Produces chapter/section-cited explanations with cross-chapter synthesis
-- Supports a deep mode for long-form, anecdote-rich responses
+- Supports a "deep" mode for long-form, anecdote-rich responses
 - Ends with 3-5 "Rabbit holes" to invite further questions
 
 ## Usage
-- Provide the book(s) to use (EPUB/PDF in the working directory)
-- Ask your question
-- Include the word "deep" to force a 6-12 paragraph, anecdote-rich response
+- Add the book (EPUB/PDF) to the folder, and then open your favourite agent CLI, either Codex, Claude Code, etc..
+- Ask your question (engage in a socratic dialogue to learn concepts deeper)
+- Include the word "deep" to force a 6-12 paragraph, anecdote-rich response from the agents
 
 ## Behavior details
 - Quick factual questions are answered briefly with citations
