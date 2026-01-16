@@ -27,6 +27,30 @@ Agent-neutral skill for grounded Q&A over local non-fiction ebooks. It extracts 
 This skill follows the Agent Skills format (SKILL.md with YAML frontmatter plus optional resources). It should work across agent platforms that support the format.
 
 ## Installation
+### Non-technical quick install (ask your agent)
+If you prefer to use your agent instead of the terminal, copy/paste one of these prompts and fill in the folder path. Replace `/chat` with whatever chat command your agent uses.
+
+Codex CLI:
+```
+/chat Please install the nonfiction-book-chat skill from this folder:
+/Users/yourname/Downloads/nonfiction-book-chat
+Then add it to my AGENTS.md.
+```
+
+Claude Code:
+```
+/chat Install the nonfiction-book-chat skill from this folder:
+/Users/yourname/Downloads/nonfiction-book-chat
+Then add it to my project's AGENTS.md.
+```
+
+GitHub Copilot (in a repo):
+```
+/chat Add the nonfiction-book-chat skill instructions to this repo by copying SKILL.md to .github/copilot-instructions.md.
+```
+
+If your agent has a `/skills` command, you can also ask it to “install a skill from a local folder” and give the same path.
+
 ### Codex
 ```bash
 # From the repo root
